@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><title>radix select</title></head><body><h1>Contact</h1>
+<form id=f><input name="name" required><input type="email" name="email" required>
+<button type="button" role="combobox" aria-required="true">Select a subject</button>
+<select name="subject" aria-hidden="true" tabindex="-1" required style="position:absolute;width:1px;height:1px;opacity:0;overflow:hidden"><option value=""></option><option value="sales">Sales</option><option value="support">Support</option></select>
+<input type="time" name="time" required>
+<textarea name="message" required></textarea><button type="submit">Send message</button></form><div id=t></div>
+<script>f.onsubmit=async e=>{e.preventDefault();if(!f.subject.value){t.textContent='Please select a subject';return}try{await fetch('https://api.example-forms.test/submit',{method:'POST',body:new FormData(f)})}catch{};t.textContent='Thanks!'}</script>
+</body></html>

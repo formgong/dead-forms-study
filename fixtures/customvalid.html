@@ -1,0 +1,3 @@
+<!doctype html><html><head><meta charset="utf-8"><title>customvalid.html</title></head><body><h1>Contact</h1>
+<form id=f novalidate><input name="name" required><input type="email" name="email" required><textarea name="message" required></textarea><button type="submit">Send message</button></form><p id=t></p><script>f.onsubmit=e=>{e.preventDefault();t.textContent='Please enter a valid phone number'}</script>
+</body></html>

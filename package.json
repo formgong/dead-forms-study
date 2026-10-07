@@ -1,0 +1,12 @@
+{
+  "name": "dead-forms-study",
+  "private": true,
+  "type": "module",
+  "description": "Tests whether website contact forms actually send anything, without sending anything.",
+  "scripts": {
+    "fixtures": "node fixtures-run.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}

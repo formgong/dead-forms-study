@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><title>honeypot</title></head><body><h1>Contact</h1>
+<form id=f><input name="name" required><input type="email" name="email" required><textarea name="message" required></textarea>
+<input type="text" name="company_site" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+<button type="submit">Send message</button></form><div id=t></div>
+<script>f.onsubmit=async e=>{e.preventDefault();if(f.company_site.value){t.textContent='Thanks, message sent!';return}try{await fetch('https://api.example-forms.test/submit',{method:'POST',body:new FormData(f)})}catch{};t.textContent='Thanks, message sent!'}</script>
+</body></html>

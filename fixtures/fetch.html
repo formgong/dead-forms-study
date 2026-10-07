@@ -1,0 +1,3 @@
+<!doctype html><html><head><meta charset="utf-8"><title>fetch.html</title></head><body><h1>Contact</h1>
+<form id=f><input name="name" required><input type="email" name="email" required><textarea name="message" required></textarea><button type="submit">Send message</button></form><div id=t></div><script>f.onsubmit=async e=>{e.preventDefault();try{await fetch('https://api.example-forms.test/submit',{method:'POST',body:new FormData(f)});t.textContent='Thanks!'}catch{t.textContent='Something went wrong'}}</script>
+</body></html>
