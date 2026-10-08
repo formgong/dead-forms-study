@@ -29,6 +29,14 @@ After the contact form is found, every request is intercepted. Same-origin stati
 - `FAKE_SUCCESS` — no such request, no other outgoing request, and a success message (or `alert()`) appeared.
 - `NO_EFFECT`, `MAILTO`, `RELOAD`, `REDIRECT_NO_SEND`, `OTHER_REQUEST`, `INVALID`, `VOID` — see PREREG.md.
 
+## If your form sends nothing
+
+Open DevTools → Network and press send: a working form adds a request that carries the text you typed. The write-up's [fix section](https://formgong.com/en/blog/contact-forms-that-send-nothing/#fix) lists three ways to fix it. Coding agents (Claude Code, Cursor, Codex) can install a skill that adds a working form and replaces fake handlers:
+
+```bash
+npx skills add formgong/skills
+```
+
 ## Ethics
 
 Nothing is submitted to anyone. The site list and per-site results are not published, and the write-up names no site. Please use the harness the same way.
